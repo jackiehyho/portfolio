@@ -1,5 +1,12 @@
 import React from 'react'
+import Styled from '@emotion/styled'
 
+const StyledContainer = Styled.div`
+max-width: 1366px;
+margin: 0 auto;
+`
 export default ({ children }) => (
-  <div style={{ maxWidth: 1180, margin: '0 auto' }}>{children}</div>
+  <StyledContainer>
+    {children}
+  </StyledContainer>
 )
