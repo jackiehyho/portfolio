@@ -45,8 +45,17 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    
   ],
 };
