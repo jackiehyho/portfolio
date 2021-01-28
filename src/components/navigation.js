@@ -1,19 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import styles from './navigation.module.css'
+// // import styles from './navigation.module.css'
 import Logo from '../assets/jackie.svg'
 import Styled from '@emotion/styled'
 
-const StyledLogo = Styled.img`
-  height: 64px;
-  width: 64px;
+const StyledLogo = Styled(Logo)`
+  height: 32px;
+  width: 32px;
   padding: 1rem;
-  left:100;
+  left: 100;
   display: relative;
 `
 const LogoContainer = Styled.div`
+  margin: 0;
+  padding: 0;
+  max-height: 64px;
   display:inline-block;
-  background-color: #FF3364;
   margin-left: 1rem;
 `
 const StyledNavbar = Styled.nav`
@@ -22,8 +24,6 @@ const StyledNavbar = Styled.nav`
   background:none;
   padding: 0;
   margin: 0;
-  max-height: 100px;
-  float: left;
 `
 const StyledNavList = Styled.ul`
   display: inline-flex;
@@ -52,7 +52,7 @@ text-decoration:none;
 
 export default () => (
   <StyledNavbar role="navigation">
-    <LogoContainer><StyledLogo src={Logo} /></LogoContainer>
+    <LogoContainer><StyledLogo /></LogoContainer>
     <StyledNavList>
       <StyledNavListItem>
         <StyledNavLink to="/">Home</StyledNavLink>
@@ -60,15 +60,8 @@ export default () => (
       <StyledNavListItem>
         <StyledNavLink to="/blog/">About</StyledNavLink>
       </StyledNavListItem>
-      <StyledNavListItem>
-        <StyledNavLink to="/blog/">Blog</StyledNavLink>
-      </StyledNavListItem>
-      <StyledNavListItem>
-        <StyledNavLink to="/blog/">Resume</StyledNavLink>
-      </StyledNavListItem>
-      <StyledNavListItem>
-        <StyledNavLink to="/blog/">Contact</StyledNavLink>
-      </StyledNavListItem>
+
+      
     </StyledNavList>
   </StyledNavbar>
 )

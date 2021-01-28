@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "Avenir";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
-  font-display: swap;
-}
+
 
 body {
   font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
@@ -13,6 +7,9 @@ body {
   color: #373F49;
   background: #231F20;
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow:hidden;
 }
 
 img {
