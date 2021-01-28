@@ -2,31 +2,30 @@ import React from 'react'
 import { Link } from 'gatsby'
 // import styles from './navigation.module.css'
 import Logo from '../assets/jackie.svg'
-import styled from '@emotion/styled'
+import Styled from '@emotion/styled'
 
-const StyledLogo = styled.img`
+const StyledLogo = Styled.img`
   height: 64px;
   width: 64px;
   padding: 1rem;
   left:100;
   display: relative;
 `
-const LogoContainer = styled.div`
+const LogoContainer = Styled.div`
   display:inline-block;
   background-color: #FF3364;
   margin-left: 1rem;
 `
-const StyledNavbar = styled.nav`
+const StyledNavbar = Styled.nav`
   display: flex;
   width: 100%;
   background:none;
   padding: 0;
   margin: 0;
   max-height: 100px;
-  font-size: 1em;
-  float:left;
+  float: left;
 `
-const StyledNavList = styled.ul`
+const StyledNavList = Styled.ul`
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
@@ -36,7 +35,7 @@ const StyledNavList = styled.ul`
   text-align:right;
 `
 
-const StyledNavListItem = styled.li`
+const StyledNavListItem = Styled.li`
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
@@ -46,14 +45,14 @@ const StyledNavListItem = styled.li`
   height:100%;
 `
 
-const StyledNavLink = styled(Link)`
-  text-decoration:none;
+const StyledNavLink = Styled(Link)`
+text-decoration:none;
 `
 
 
 export default () => (
   <StyledNavbar role="navigation">
-    <LogoContainer><a href=""><StyledLogo src={Logo} /></a></LogoContainer>
+    <LogoContainer><StyledLogo src={Logo} /></LogoContainer>
     <StyledNavList>
       <StyledNavListItem>
         <StyledNavLink to="/">Home</StyledNavLink>

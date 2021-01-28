@@ -9,7 +9,7 @@ height: ${props =>
 `
 
 export default ({ children }) => (
-  <StyledContainer>
+  <StyledContainer full>
     {children}
   </StyledContainer>
 )
