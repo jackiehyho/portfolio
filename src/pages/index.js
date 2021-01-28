@@ -5,8 +5,22 @@ import get from 'lodash/get'
 // import Hero from '../components/hero'
 import Layout from '../components/layout'
 // import ArticlePreview from '../components/article-preview'
+import hero from '../assets/hero-image.png'
+import Styled from '@emotion/styled'
+
+
+const HeroSection = Styled.div`
+  background: url(${hero}) center center;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+`
+
+
 
 class RootIndex extends React.Component {
+
+  
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
@@ -14,6 +28,10 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
+          <HeroSection>
+
+
+          </HeroSection>
         {/* <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
