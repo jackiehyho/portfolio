@@ -3,36 +3,45 @@ import { Link } from 'gatsby'
 // // import styles from './navigation.module.css'
 import Logo from '../assets/jackie.svg'
 import Styled from '@emotion/styled'
+import Burger from './burger'
 
 const StyledLogo = Styled(Logo)`
   height: 32px;
   width: 32px;
   padding: 1rem;
-  left: 100;
-  display: relative;
 `
 const LogoContainer = Styled.div`
   margin: 0;
   padding: 0;
   max-height: 64px;
-  display:inline-block;
   margin-left: 1rem;
 `
-const StyledNavbar = Styled.nav`
-  display: flex;
-  width: 100%;
-  background:none;
-  padding: 0;
-  margin: 0;
+
+const StyledBurger = Styled(Burger)`
+  display:none;
+  @media (min-width: 768px) {
+  display:initial;
+  }
 `
-const StyledNavList = Styled.ul`
+
+const StyledNavbar = Styled.nav`
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  background:transparent;
+  padding: 0;
+  margin: auto;
+`
+
+const StyledNavList = Styled.ul`
+  display: none;
   align-items: center;
   margin: 0 1em;
   list-style: none;
   text-decoration: none;
   margin-left:auto;
-  text-align:right;
 `
 
 const StyledNavListItem = Styled.li`
@@ -50,9 +59,11 @@ text-decoration:none;
 `
 
 
+
 export default () => (
   <StyledNavbar role="navigation">
     <LogoContainer><StyledLogo /></LogoContainer>
+    <StyledBurger />
     <StyledNavList>
       <StyledNavListItem>
         <StyledNavLink to="/">Home</StyledNavLink>
@@ -60,8 +71,6 @@ export default () => (
       <StyledNavListItem>
         <StyledNavLink to="/blog/">About</StyledNavLink>
       </StyledNavListItem>
-
-      
     </StyledNavList>
   </StyledNavbar>
 )
