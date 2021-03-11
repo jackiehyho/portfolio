@@ -44,6 +44,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-scroll-reveal",
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

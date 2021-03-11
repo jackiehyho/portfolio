@@ -4,12 +4,11 @@ import Styled from '@emotion/styled'
 const StyledContainer = Styled.div`
 max-width: 1366px;
 margin: 0 auto;
-height: ${props =>
-  props.full ? '100vh' : 'initial'};
+padding:1rem;
 `
 
 export default ({ children }) => (
-  <StyledContainer full>
+  <StyledContainer>
     {children}
   </StyledContainer>
 )
