@@ -4,14 +4,14 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import Styled from '@emotion/styled'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Hero from '../images/hero-image-1.png'
 import Footer from '../components/footer'
 import ArticlePreview from '../components/article-preview'
 
 const HeroSection = Styled.section`
   height: calc(100vh - 64px);
-  // background: url(${Hero}) center center;
+  background: url(${Hero}) center center;
   background-size:cover;
   max-width: 100vw;
   z-index: 100;
@@ -67,18 +67,18 @@ const HeroSubheader = Styled.h2`
   padding: 0;
 `
 
-const HeroButton = Styled(Link)`
-border: ${props =>
-  props.magenta ? 'none' : '1px solid white;'};
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  color: ${props =>
-    props.magenta ? '#231F20' : 'white'};
-  border-radius: 0.5rem;
-  background: ${props =>
-    props.magenta ? '#36DBCA' : 'initial'};
-  text-decoration:none;
-  `
+// const HeroButton = Styled(Link)`
+// border: ${props =>
+//   props.magenta ? 'none' : '1px solid white;'};
+//   margin: 1rem;
+//   padding: 0.5rem 1rem;
+//   color: ${props =>
+//     props.magenta ? '#231F20' : 'white'};
+//   border-radius: 0.5rem;
+//   background: ${props =>
+//     props.magenta ? '#36DBCA' : 'initial'};
+//   text-decoration:none;
+//   `
 
 const HeroButtonContainer = Styled.div`
   display:flex;
@@ -89,15 +89,15 @@ const HeroButtonContainer = Styled.div`
 
 `
 
-const HeroNextSection = Styled(Link)`
-  color:#36DBCA;
-  font-size: 0.75rem;
-  padding-bottom:1rem;
-  text-decoration: none;
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 2rem;
-`
+// const HeroNextSection = Styled(Link)`
+//   color:#36DBCA;
+//   font-size: 0.75rem;
+//   padding-bottom:1rem;
+//   text-decoration: none;
+//   position: absolute;
+//   bottom: 0;
+//   padding-bottom: 2rem;
+// `
 
 const Section = Styled.section`
   background-color: white;
@@ -188,7 +188,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY", locale: "en-us")
+          publishDate(formatString: "MMMM Do, YYYY")
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG

@@ -30,12 +30,13 @@ padding: 0;
 color: #aaaaaa;
 float:left;
 text-align:center;
+padding:1rem;
 `
 
 const SocialMediaList = Styled.ul`
 float:right;
 display:inline;
-padding:0;
+padding:1rem;
 margin:0;
 `
 const SocialMediaItem = Styled.li`
@@ -60,7 +61,7 @@ const Footer = () => {
             <SocialMediaItem>
               <img alt=""  src="https://via.placeholder.com/32"/></SocialMediaItem>
           </SocialMediaList>
-    </MyFooter>
+        </MyFooter>
         );
       }
 

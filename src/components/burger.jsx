@@ -27,9 +27,7 @@ const MyHamburger = styled.div`
 `
 
 const HamburgerContainer = styled.div`
-position: absolute;
-top: 0;
-right: 0;
+    margin-left:auto;
 `
 
 const HamburgerLines = styled.div`
@@ -53,7 +51,7 @@ const TopLine = styled(HamburgerLines)`
     };
 
     background: ${(props) => 
-        props.isOpen ? '#333333' : '#333333'
+        props.isOpen ? '#FFFFFF' : '#FFFFFF'
     };
 
     @media only screen and (min-width: 768px) {
@@ -67,6 +65,10 @@ const TopLine = styled(HamburgerLines)`
 const MidLine = styled(HamburgerLines)`
     opacity ${(props) => 
         props.isOpen ? '0' : '1'
+
+    };
+    background: ${(props) => 
+        props.isOpen ? '#FFFFFF' : '#FFFFFF'
     };
 
 @media only screen and (min-width: 768px) {
@@ -88,7 +90,7 @@ const BotLine = styled(HamburgerLines)`
     };
 
     background: ${(props) => 
-        props.isOpen ? '#333333' : '#333333'
+        props.isOpen ? '#FFFFFF' : '#FFFFFF'
     };
 
 @media only screen and (min-width: 768px) {
