@@ -126,8 +126,6 @@ const Highlight = Styled.span`
     color: #36DBCA;
 `
 
-
-
 class RootIndex extends React.Component {
   render() {
     // const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -145,22 +143,20 @@ class RootIndex extends React.Component {
               <HeroContentArea>
                   <HeroSubheader>Hi I'm</HeroSubheader>
                   <HeroHeader>Jackie Ho</HeroHeader>
-                  <HeroSubheader><Highlight>Front-End Web Developer & Designer</Highlight> &nbsp;Based In Vancouver, BC</HeroSubheader>
+                  <HeroSubheader><Highlight>Digital Product Designer</Highlight> &nbsp;Based In Vancouver, BC
+                  </HeroSubheader>
                   <HeroButtonContainer>
                       {/* <HeroButton to="/">See Work</HeroButton><HeroButton to="/" >About Me</HeroButton> */}
                   </HeroButtonContainer>
                   {/* <HeroNextSection to="/">Get To Know Me ↧</HeroNextSection> */}
-
               </HeroContentArea>
           </HeroSection>
-          {/* <Section>
+          <Section>
           <Header>Things That I Help With</Header>
-          </Section> */}
+          </Section>
           <Section>
               <Header>Recent Projects</Header>
-              <div className="wrapper" data-sal="slide-up"
-  data-sal-delay="250" data-sal-duration="1000"
-  data-sal-easing="ease">
+              <div className="wrapper" data-sal="slide-up" data-sal-delay="250" data-sal-duration="1000" data-sal-easing="ease">
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (

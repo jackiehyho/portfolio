@@ -25,7 +25,7 @@ const StyledLogo = Styled(Logo)`
     padding: 1rem;
   }
 `
-const LogoContainer = Styled.div`
+const LogoContainer = Styled(Link)`
   margin: 0;
   padding: 0;
   max-height: 64px;
@@ -110,7 +110,7 @@ const Navigation = () => {
   return (
 
   <StyledNavbar role="navigation">
-    <LogoContainer><StyledLogo /></LogoContainer>
+    <LogoContainer to="/"><StyledLogo /></LogoContainer>
     <StyledBurger onClick={() => showNav(!nav)} />
     <StyledNavList nav={nav}>
       <StyledNavListItem>
